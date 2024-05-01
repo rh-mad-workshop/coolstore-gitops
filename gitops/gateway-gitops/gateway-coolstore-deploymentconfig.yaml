@@ -10,11 +10,10 @@ items:
     labels:
       app: coolstore
       app.kubernetes.io/instance: gateway
-      app.kubernetes.io/managed-by: odo
-      app.kubernetes.io/managed-by-version: v1.0.2
-      app.kubernetes.io/name: java
+      app.kubernetes.io/managed-by-version: v1.0.0
+      app.kubernetes.io/name: dotnet
       app.kubernetes.io/part-of: coolstore
-      app.openshift.io/runtime-version: "11"
+      app.openshift.io/runtime-version: "21"
     name: gateway-coolstore
   spec:
     replicas: 1
@@ -45,7 +44,7 @@ items:
               name: catalog-coolstore-8080
           - secretRef:
               name: inventory-coolstore-8080
-          image: image-registry.openshift-image-registry.svc:5000/cn-project6/gateway-coolstore:latest
+          image: image-registry.openshift-image-registry.svc:5000/globex-outerloop-user1/gateway-coolstore:latest
           imagePullPolicy: IfNotPresent
           livenessProbe:
             failureThreshold: 3

@@ -3,8 +3,6 @@ items:
 - apiVersion: build.openshift.io/v1
   kind: BuildConfig
   metadata:
-    annotations:
-      openshift.io/generated-by: OpenShiftNewApp
     labels:
       app: coolstore
       app.kubernetes.io/instance: web
@@ -22,10 +20,10 @@ items:
     resources: {}
     runPolicy: Serial
     source:
-      contextDir: labs/web-nodejs
+      contextDir: apps/web-nodejs
       git:
-        ref: "3.0"
-        uri: https://github.com/mcouliba/cloud-native-workshop
+        ref: main
+        uri: https://github.com/rh-mad-workshop/coolstore-gitops.git
       type: Git
     strategy:
       sourceStrategy:

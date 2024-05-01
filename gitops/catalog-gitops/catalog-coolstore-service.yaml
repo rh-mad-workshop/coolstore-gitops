@@ -9,17 +9,15 @@ items:
     labels:
       app: coolstore
       app.kubernetes.io/instance: catalog
-      app.kubernetes.io/managed-by: odo
-      app.kubernetes.io/managed-by-version: v1.0.2
+      app.kubernetes.io/managed-by-version: v1.0.0
       app.kubernetes.io/name: java
       app.kubernetes.io/part-of: coolstore
-      app.openshift.io/runtime-version: "11"
+      app.openshift.io/runtime-version: "21"
     name: catalog-coolstore
     ownerReferences:
     - apiVersion: apps.openshift.io/v1
       kind: DeploymentConfig
       name: catalog-coolstore
-      uid: 6d089752-5c8b-49dc-bb03-36dc40c53907
   spec:
     ports:
     - name: http

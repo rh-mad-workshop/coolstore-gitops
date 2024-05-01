@@ -6,7 +6,6 @@ items:
     annotations:
       app.kubernetes.io/component-source-type: git
       app.openshift.io/connects-to: gateway
-      openshift.io/generated-by: OpenShiftNewApp
     labels:
       app: coolstore
       app.kubernetes.io/instance: web
@@ -34,9 +33,6 @@ items:
       type: Rolling
     template:
       metadata:
-        annotations:
-          openshift.io/generated-by: OpenShiftNewApp
-        creationTimestamp: null
         labels:
           app: coolstore
           app.kubernetes.io/instance: web
@@ -46,7 +42,7 @@ items:
           maistra.io/expose-route: "true"
       spec:
         containers:
-        - image: image-registry.openshift-image-registry.svc:5000/cn-project6/web-coolstore:latest
+        - image: image-registry.openshift-image-registry.svc:5000/globex-outerloop-user1/web-coolstore:latest
           imagePullPolicy: Always
           livenessProbe:
             failureThreshold: 3

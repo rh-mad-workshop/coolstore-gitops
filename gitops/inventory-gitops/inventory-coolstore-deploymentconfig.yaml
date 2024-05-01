@@ -10,11 +10,10 @@ items:
     labels:
       app: coolstore
       app.kubernetes.io/instance: inventory
-      app.kubernetes.io/managed-by: odo
-      app.kubernetes.io/managed-by-version: v1.0.2
-      app.kubernetes.io/name: java
+      app.kubernetes.io/managed-by-version: v1.0.0
+      app.kubernetes.io/name: quarkus
       app.kubernetes.io/part-of: coolstore
-      app.openshift.io/runtime-version: "11"
+      app.openshift.io/runtime-version: "21"
     name: inventory-coolstore
   spec:
     replicas: 1
@@ -40,7 +39,7 @@ items:
           maistra.io/expose-route: "true"
       spec:
         containers:
-        - image: image-registry.openshift-image-registry.svc:5000/cn-project6/inventory-coolstore:latest
+        - image: image-registry.openshift-image-registry.svc:5000/globex-outerloop-user1/inventory-coolstore:latest
           imagePullPolicy: IfNotPresent
           livenessProbe:
             failureThreshold: 3

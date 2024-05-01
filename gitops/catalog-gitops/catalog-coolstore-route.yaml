@@ -8,8 +8,7 @@ items:
     labels:
       app: coolstore
       app.kubernetes.io/instance: catalog
-      app.kubernetes.io/managed-by: odo
-      app.kubernetes.io/managed-by-version: v1.0.2
+      app.kubernetes.io/managed-by-version: v1.0.0
       app.kubernetes.io/part-of: coolstore
       odo.openshift.io/url-name: catalog
     name: catalog-coolstore
@@ -17,7 +16,6 @@ items:
     - apiVersion: apps.openshift.io/v1
       kind: DeploymentConfig
       name: catalog-coolstore
-      uid: 6d089752-5c8b-49dc-bb03-36dc40c53907
   spec:
     host: catalog-coolstore-globex-outerloop-user1.apps.cluster-nantes-c90c.nantes-c90c.example.opentlc.com
     port:

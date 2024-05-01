@@ -9,11 +9,10 @@ items:
     labels:
       app: coolstore
       app.kubernetes.io/instance: gateway
-      app.kubernetes.io/managed-by: odo
-      app.kubernetes.io/managed-by-version: v1.0.2
+      app.kubernetes.io/managed-by-version: v1.0.0
       app.kubernetes.io/name: java
       app.kubernetes.io/part-of: coolstore
-      app.openshift.io/runtime-version: "11"
+      app.openshift.io/runtime-version: "21"
     name: gateway-coolstore
     ownerReferences:
     - apiVersion: apps.openshift.io/v1
